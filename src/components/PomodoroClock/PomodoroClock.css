@@ -1,0 +1,111 @@
+* {
+  box-sizing: border-box;
+}
+
+#root {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Roboto Condensed", sans-serif;
+  background-color: rgb(169, 169, 255);
+}
+
+.container {
+  width: 90%;
+  max-width: 600px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  padding: 15px;
+  box-shadow: 3px 3px 3px black;
+}
+
+.timer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.timer-container,
+.timer-controller {
+  display: flex;
+  width: 100%;
+}
+
+#timer-label {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 2rem;
+}
+
+#timer-label > p {
+  margin: 0;
+}
+
+#time-left {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 6rem;
+}
+
+.timer-controller {
+  justify-content: flex-end;
+}
+
+.timer-controller > button {
+  width: 30%;
+  height: 38px;
+}
+
+#start_stop {
+  margin-right: 15px;
+}
+
+.controller {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+hr {
+  content: "";
+  width: 100%;
+  height: 1px;
+  border-color: black;
+  display: block;
+  margin: 15px;
+}
+
+.button-container {
+  width: 50%;
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+}
+
+#session-increment,
+#session-decrement,
+#break-increment,
+#break-decrement {
+  width: 40%;
+  height: 100%;
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+button {
+  border-radius: 5px;
+  box-shadow: 1px 1px 2px black;
+}
