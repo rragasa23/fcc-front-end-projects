@@ -1,6 +1,6 @@
-import "./MarkdownPreviewer.css";
 import { useState } from "react";
 import { marked } from "marked";
+import styles from "./MarkdownPreviewer.module.css"; // Importing the CSS Module
 
 function MarkdownPreviewer() {
   const placeholder = `# Welcome to my React Markdown Previewer!
@@ -55,21 +55,23 @@ And here. | Okay. | I think we get it.
   });
 
   return (
-    <div className="container rows">
-      <div className="editor-container">
-        <div className="title">Editor</div>
+    <div className={styles.container}>
+      <div className={styles.editorContainer}>
+        <div className={styles.title}>Editor</div>
         <textarea
           id="editor"
+          className={styles.textarea}
           value={markdown}
           rows="15"
           cols="50"
           onChange={(e) => setMarkdown(e.target.value)}
         ></textarea>
       </div>
-      <div className="previewer-container">
-        <div className="title">Previewer</div>
+      <div className={styles.previewerContainer}>
+        <div className={styles.title}>Previewer</div>
         <div
           id="preview"
+          className={styles.preview}
           dangerouslySetInnerHTML={{ __html: marked(markdown) }}
         ></div>
       </div>

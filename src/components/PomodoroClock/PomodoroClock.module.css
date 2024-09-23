@@ -1,18 +1,6 @@
-* {
-  box-sizing: border-box;
-}
+/* PomodoroClock.module.css */
 
-#root {
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  font-family: "Roboto Condensed", sans-serif;
-  background-color: rgb(169, 169, 255);
-}
-
+/* Container styling */
 .container {
   width: 90%;
   max-width: 600px;
@@ -26,19 +14,20 @@
   box-shadow: 3px 3px 3px black;
 }
 
+/* Timer styling */
 .timer {
   width: 100%;
   display: flex;
   flex-direction: column;
 }
 
-.timer-container,
-.timer-controller {
+.timerContainer,
+.timerController {
   display: flex;
   width: 100%;
 }
 
-#timer-label {
+.timerLabel {
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -47,11 +36,11 @@
   font-size: 2rem;
 }
 
-#timer-label > p {
+.timerLabel p {
   margin: 0;
 }
 
-#time-left {
+.timeLeft {
   flex: 2;
   display: flex;
   justify-content: center;
@@ -59,19 +48,20 @@
   font-size: 6rem;
 }
 
-.timer-controller {
+.timerController {
   justify-content: flex-end;
 }
 
-.timer-controller > button {
+.timerController button {
   width: 30%;
   height: 38px;
 }
 
-#start_stop {
+.startStop {
   margin-right: 15px;
 }
 
+/* Session and Break controllers */
 .controller {
   width: 100%;
   height: 100%;
@@ -79,7 +69,7 @@
   justify-content: space-between;
 }
 
-hr {
+.hr {
   content: "";
   width: 100%;
   height: 1px;
@@ -88,18 +78,14 @@ hr {
   margin: 15px;
 }
 
-.button-container {
+.buttonContainer {
   width: 50%;
   display: flex;
-
   justify-content: space-between;
   align-items: center;
 }
 
-#session-increment,
-#session-decrement,
-#break-increment,
-#break-decrement {
+.incrementDecrementButton {
   width: 40%;
   height: 100%;
   font-family: "Roboto Condensed", sans-serif;

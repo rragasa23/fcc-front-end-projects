@@ -1,17 +1,26 @@
 import PropTypes from "prop-types";
+import styles from "./PomodoroClock.module.css"; // Importing the CSS Module
 
 const Break = ({ breakLength, incrementBreak, decrementBreak }) => {
   return (
-    <div className="break controller">
-      <div className="controller-display">
+    <div className={styles.controller}>
+      <div className={styles.controllerDisplay}>
         <div id="break-label">Break Length</div>
         <div id="break-length">{breakLength}</div>
       </div>
-      <div className="button-container">
-        <button id="break-increment" onClick={incrementBreak}>
+      <div className={styles.buttonContainer}>
+        <button
+          id="break-increment"
+          onClick={incrementBreak}
+          className={styles.incrementDecrementButton}
+        >
           INCREMENT
         </button>
-        <button id="break-decrement" onClick={decrementBreak}>
+        <button
+          id="break-decrement"
+          onClick={decrementBreak}
+          className={styles.incrementDecrementButton}
+        >
           DECREMENT
         </button>
       </div>

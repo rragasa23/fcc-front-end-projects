@@ -1,5 +1,5 @@
-import "./DrumMachine.css";
 import { useState } from "react";
+import styles from "./DrumMachine.module.css"; // Importing the CSS Module
 import Drum from "./Drum.jsx";
 
 function DrumMachine() {
@@ -10,12 +10,12 @@ function DrumMachine() {
   };
 
   return (
-    <div className="container" id="drum-machine">
-      <div className="instrument-display" id="display">
+    <div className={styles.container} id="drum-machine">
+      <div className={styles.instrumentDisplay} id="display">
         <p>Instrument Playing:</p>
         <p>{sound}</p>
       </div>
-      <div className="drum-pad-container">
+      <div className={styles.drumPadContainer}>
         <Drum
           instrument={"heater-1"}
           trigger={"Q"}
@@ -23,7 +23,7 @@ function DrumMachine() {
             "https://cdn.freecodecamp.org/testable-projects-fcc/audio/Heater-1.mp3"
           }
           onTrigger={handleDrumTrigger}
-        ></Drum>
+        />
         <Drum
           instrument={"heater-2"}
           trigger={"W"}
@@ -31,7 +31,7 @@ function DrumMachine() {
             "https://cdn.freecodecamp.org/testable-projects-fcc/audio/Heater-2.mp3"
           }
           onTrigger={handleDrumTrigger}
-        ></Drum>
+        />
         <Drum
           instrument={"heater-3"}
           trigger={"E"}
@@ -39,7 +39,7 @@ function DrumMachine() {
             "https://cdn.freecodecamp.org/testable-projects-fcc/audio/Heater-3.mp3"
           }
           onTrigger={handleDrumTrigger}
-        ></Drum>
+        />
         <Drum
           instrument={"heater-4"}
           trigger={"A"}
@@ -47,7 +47,7 @@ function DrumMachine() {
             "https://cdn.freecodecamp.org/testable-projects-fcc/audio/Heater-4_1.mp3"
           }
           onTrigger={handleDrumTrigger}
-        ></Drum>
+        />
         <Drum
           instrument={"clap"}
           trigger={"S"}
@@ -55,7 +55,7 @@ function DrumMachine() {
             "https://cdn.freecodecamp.org/testable-projects-fcc/audio/Heater-6.mp3"
           }
           onTrigger={handleDrumTrigger}
-        ></Drum>
+        />
         <Drum
           instrument={"open-hh"}
           trigger={"D"}
@@ -63,7 +63,7 @@ function DrumMachine() {
             "https://cdn.freecodecamp.org/testable-projects-fcc/audio/Dsc_Oh.mp3"
           }
           onTrigger={handleDrumTrigger}
-        ></Drum>
+        />
         <Drum
           instrument={"kick-n-hat"}
           trigger={"Z"}
@@ -71,7 +71,7 @@ function DrumMachine() {
             "https://cdn.freecodecamp.org/testable-projects-fcc/audio/Kick_n_Hat.mp3"
           }
           onTrigger={handleDrumTrigger}
-        ></Drum>
+        />
         <Drum
           instrument={"kick"}
           trigger={"X"}
@@ -79,7 +79,7 @@ function DrumMachine() {
             "https://cdn.freecodecamp.org/testable-projects-fcc/audio/RP4_KICK_1.mp3"
           }
           onTrigger={handleDrumTrigger}
-        ></Drum>
+        />
         <Drum
           instrument={"closed-hh"}
           trigger={"C"}
@@ -87,7 +87,7 @@ function DrumMachine() {
             "https://cdn.freecodecamp.org/testable-projects-fcc/audio/Cev_H2.mp3"
           }
           onTrigger={handleDrumTrigger}
-        ></Drum>
+        />
       </div>
     </div>
   );

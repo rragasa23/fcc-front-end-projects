@@ -1,8 +1,8 @@
-import "./PomodoroClock.css";
+import { useState } from "react";
+import styles from "./PomodoroClock.module.css"; // Importing the CSS Module
 import Session from "./Session.jsx";
 import Break from "./Break.jsx";
 import Timer from "./Timer";
-import { useState } from "react";
 
 function PomodoroClock() {
   const [sessionLength, setSessionLength] = useState(25);
@@ -57,7 +57,7 @@ function PomodoroClock() {
   };
 
   return (
-    <div className="container">
+    <div className={styles.container}>
       <Timer
         mode={mode}
         reset={reset}
@@ -67,14 +67,14 @@ function PomodoroClock() {
         setTime={setTime}
         handleTimerEnd={handleTimerEnd}
       />
-      <hr />
+      <hr className={styles.hr} />
       <Session
         sessionLength={sessionLength}
         incrementSession={incrementSession}
         decrementSession={decrementSession}
         active={active}
       />
-      <hr />
+      <hr className={styles.hr} />
       <Break
         breakLength={breakLength}
         incrementBreak={incrementBreak}

@@ -1,5 +1,5 @@
-import "./JavaScriptCalculator.css";
 import { useState } from "react";
+import styles from "./JavaScriptCalculator.module.css"; // Importing the CSS Module
 
 function JavaScriptCalculator() {
   const [curr, setCurr] = useState("");
@@ -64,65 +64,65 @@ function JavaScriptCalculator() {
   };
 
   return (
-    <div className="container">
-      <div className="input-output-container">
-        <div className="input">
+    <div className={styles.container}>
+      <div className={styles.inputOutputContainer}>
+        <div className={styles.input}>
           <p>{equation}</p>
         </div>
-        <div className="output" id="display">
+        <div className={styles.output} id="display">
           <p>{display}</p>
         </div>
       </div>
-      <div className="button-wrapper">
-        <button id="clear" onClick={clear}>
+      <div className={styles.buttonWrapper}>
+        <button className={styles.clear} onClick={clear}>
           AC
         </button>
-        <button id="zero" value="0" onClick={updateNumber}>
+        <button className={styles.zero} value="0" onClick={updateNumber}>
           0
         </button>
-        <button id="one" value="1" onClick={updateNumber}>
+        <button className={styles.one} value="1" onClick={updateNumber}>
           1
         </button>
-        <button id="two" value="2" onClick={updateNumber}>
+        <button className={styles.two} value="2" onClick={updateNumber}>
           2
         </button>
-        <button id="three" value="3" onClick={updateNumber}>
+        <button className={styles.three} value="3" onClick={updateNumber}>
           3
         </button>
-        <button id="four" value="4" onClick={updateNumber}>
+        <button className={styles.four} value="4" onClick={updateNumber}>
           4
         </button>
-        <button id="five" value="5" onClick={updateNumber}>
+        <button className={styles.five} value="5" onClick={updateNumber}>
           5
         </button>
-        <button id="six" value="6" onClick={updateNumber}>
+        <button className={styles.six} value="6" onClick={updateNumber}>
           6
         </button>
-        <button id="seven" value="7" onClick={updateNumber}>
+        <button className={styles.seven} value="7" onClick={updateNumber}>
           7
         </button>
-        <button id="eight" value="8" onClick={updateNumber}>
+        <button className={styles.eight} value="8" onClick={updateNumber}>
           8
         </button>
-        <button id="nine" value="9" onClick={updateNumber}>
+        <button className={styles.nine} value="9" onClick={updateNumber}>
           9
         </button>
-        <button id="decimal" value="." onClick={updateNumber}>
+        <button className={styles.decimal} value="." onClick={updateNumber}>
           .
         </button>
-        <button id="add" value="+" onClick={updateOperator}>
+        <button className={styles.add} value="+" onClick={updateOperator}>
           +
         </button>
-        <button id="subtract" value="-" onClick={updateOperator}>
+        <button className={styles.subtract} value="-" onClick={updateOperator}>
           -
         </button>
-        <button id="multiply" value="*" onClick={updateOperator}>
+        <button className={styles.multiply} value="*" onClick={updateOperator}>
           *
         </button>
-        <button id="divide" value="/" onClick={updateOperator}>
+        <button className={styles.divide} value="/" onClick={updateOperator}>
           /
         </button>
-        <button id="equals" value="0" onClick={calculate}>
+        <button className={styles.equals} value="0" onClick={calculate}>
           =
         </button>
       </div>

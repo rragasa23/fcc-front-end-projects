@@ -1,5 +1,6 @@
 import PropTypes from "prop-types";
 import { useEffect } from "react";
+import styles from "./DrumMachine.module.css"; // Importing the CSS Module
 
 const Drum = ({ instrument, trigger, audioSrc, onTrigger }) => {
   const handleClick = () => {
@@ -34,7 +35,7 @@ const Drum = ({ instrument, trigger, audioSrc, onTrigger }) => {
   }, [trigger, onTrigger]);
 
   return (
-    <div className="drum-pad" id={instrument} onClick={handleClick}>
+    <div className={styles.drumPad} id={instrument} onClick={handleClick}>
       {trigger}
       <audio className="clip" id={trigger} src={audioSrc}></audio>
     </div>

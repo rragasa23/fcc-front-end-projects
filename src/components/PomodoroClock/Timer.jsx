@@ -1,5 +1,6 @@
 import PropTypes from "prop-types";
 import { useState, useEffect, useRef } from "react";
+import styles from "./PomodoroClock.module.css"; // Importing the CSS Module
 
 const Timer = ({ reset, active, setActive, time, handleTimerEnd, mode }) => {
   const [countdown, setCountdown] = useState(time);
@@ -58,21 +59,25 @@ const Timer = ({ reset, active, setActive, time, handleTimerEnd, mode }) => {
   };
 
   return (
-    <div className="timer">
-      <div className="timer-container">
-        <div id="timer-label">
+    <div className={styles.timer}>
+      <div className={styles.timerContainer}>
+        <div className={styles.timerLabel}>
           <p>{mode === "session" ? "Session" : "Break"}</p>
         </div>
-        <div id="time-left">{formatTime(countdown)}</div>
+        <div className={styles.timeLeft}>{formatTime(countdown)}</div>
       </div>
-      <div className="timer-controller">
-        <button id="start_stop" onClick={playOrPause}>
+      <div className={styles.timerController}>
+        <button
+          id="start_stop"
+          onClick={playOrPause}
+          className={styles.startStop}
+        >
           Play/Pause
         </button>
         <button id="reset" onClick={handleReset}>
           Reset
         </button>
-        <audio className="clip" id="beep" src={audioSrc}></audio>
+        <audio className={styles.clip} id="beep" src={audioSrc}></audio>
       </div>
     </div>
   );
