@@ -14,14 +14,14 @@ const Break = ({ breakLength, incrementBreak, decrementBreak }) => {
           onClick={incrementBreak}
           className={styles.incrementDecrementButton}
         >
-          INCREMENT
+          +
         </button>
         <button
           id="break-decrement"
           onClick={decrementBreak}
           className={styles.incrementDecrementButton}
         >
-          DECREMENT
+          -
         </button>
       </div>
     </div>

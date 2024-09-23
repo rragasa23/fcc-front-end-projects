@@ -12,6 +12,7 @@
   border: 1px solid black;
   padding: 15px;
   box-shadow: 3px 3px 3px black;
+  background-color: #e0e0e0;
 }
 
 /* Timer styling */
@@ -83,6 +84,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 20px;
 }
 
 .incrementDecrementButton {

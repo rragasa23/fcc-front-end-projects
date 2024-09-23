@@ -1,4 +1,4 @@
-import "./App.css";
+import styles from "./App.module.css"; // Importing the CSS Module
 import DrumMachine from "./components/DrumMachine/DrumMachine.jsx";
 import JavascriptCalculator from "./components/JavaScriptCalculator/JavascriptCalculator.jsx";
 import MarkdownPreviewer from "./components/MarkdownPreviewer/MarkdownPreviewer.jsx";
@@ -22,13 +22,16 @@ function App() {
       case "random-quote-machine":
         return <RandomQuoteMachine />;
       default:
-        return <h2>Select a project from the sidebar</h2>;
+        return <h2>Select a freeCodeCamp Front End Project</h2>;
     }
   };
 
   return (
     <>
-      <nav className="sidebar">
+      <h3 className={styles.heading}>
+        Projects created and developed by Ryan Ragasa
+      </h3>
+      <nav className={styles.sidebar}>
         <button onClick={() => setActiveProject("random-quote-machine")}>
           Random Quote Machine
         </button>
@@ -45,7 +48,7 @@ function App() {
           Pomodoro Clock
         </button>
       </nav>
-      <div className="project-container">{renderProject()}</div>
+      <div className={styles.projectContainer}>{renderProject()}</div>
     </>
   );
 }

@@ -1,0 +1,41 @@
+/* App.module.css */
+
+.projectContainer {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  background-color: #a9a9ff;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.heading {
+  position: fixed;
+  top: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.sidebar {
+  position: fixed;
+  top: 15px; /* Adjusted to give space for the heading */
+  left: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar button {
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #e0e0e0;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
+}
+
+.sidebar button:hover {
+  background-color: #d0d0d0;
+}

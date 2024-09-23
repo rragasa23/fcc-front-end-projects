@@ -42,7 +42,7 @@ function RandomQuoteMachine() {
 
   return (
     <div className={styles.container}>
-      <div id={styles.quoteBox}>
+      <div className={styles.quoteBox}>
         <div className={styles.text}>
           {quote ? '"' + quote.q : "Loading..."}
         </div>

@@ -14,14 +14,14 @@ const Session = ({ sessionLength, incrementSession, decrementSession }) => {
           onClick={incrementSession}
           className={styles.incrementDecrementButton}
         >
-          INCREMENT
+          +
         </button>
         <button
           id="session-decrement"
           onClick={decrementSession}
           className={styles.incrementDecrementButton}
         >
-          DECREMENT
+          -
         </button>
       </div>
     </div>
