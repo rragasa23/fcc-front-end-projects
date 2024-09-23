@@ -9,10 +9,6 @@ function App() {
   return (
     <div className="project-container">
       <RandomQuoteMachine />
-      <MarkdownPreviewer />
-      <DrumMachine />
-      <JavascriptCalculator />
-      <PomodoroClock />
     </div>
   );
 }
